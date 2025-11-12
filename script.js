@@ -40,17 +40,35 @@
 
 // ...................if else condition
 
-let bill = Number(prompt("enter your bill"));
-let discount = 0;
-if(bill > 5000){
-    discount = 15;
+// let bill = Number(prompt("enter your bill"));
+// let discount = 0;
+// if(bill > 5000){
+//     discount = 15;
+// }
+// else{
+//    discount = 10;
+// }
+// let discounttAmount= (discount/100)*bill;
+// let finlaBill = bill - discounttAmount;
+// console.log(finlaBill);
+function calculateDiscount() {
+    let amount = Number(document.getElementById("amount").value);
+    let finalBill = document.getElementById("discount");
+
+    let discount = 0;
+    if (amount > 50000) {
+        discount = 15;
+    } else {
+        discount = 10;
+    }
+
+    let discountAmount = (discount / 100) * amount;
+    let totalBill = amount - discountAmount;
+
+    finalBill.innerText = `Final Bill after ${discount}% discount: ${totalBill}`;
 }
-else{
-   discount = 10;
-}
-let discounttAmount= (discount/100)*bill;
-let finlaBill = bill - discounttAmount;
-console.log(finlaBill);
+
+
 
 
 
